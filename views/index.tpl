@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/static/css/kiosk.css">
 </head>
 <body data-active-slide="{{.ActiveSlide}}">
+    <div class="sky-backdrop" aria-hidden="true"></div>
+
     <header class="kiosk-header">
         <div class="brand">
             <img class="brand-logo" src="/static/img/logo.png" alt="Luchtscouts Seppe logo">
