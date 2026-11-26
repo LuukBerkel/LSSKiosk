@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title description">
+  <title id="title">Vliegtuigafbeelding niet beschikbaar</title>
+  <desc id="description">Een eenvoudig silhouet van een vliegtuig tegen een avondlucht.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#172554"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#sky)"/>
+  <circle cx="500" cy="82" r="32" fill="#38bdf8" opacity=".8"/>
+  <path d="M0 282 130 226l102 40 95-70 111 53 89-35 113 48v98H0z" fill="#1e293b"/>
+  <path d="m320 64 25 97 136 58v19l-136-25 9 66 53 28v14l-87-19-87 19v-14l53-28 9-66-136 25v-19l136-58z" fill="#cbd5e1"/>
+  <text x="320" y="338" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="16" letter-spacing="2" text-anchor="middle">VLIEGTUIGAFBEELDING NIET BESCHIKBAAR</text>
+</svg>
