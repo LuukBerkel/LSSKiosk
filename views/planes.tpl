@@ -1,7 +1,7 @@
 <div class="planes-page">
 <div class="page-header">
     <h1>✈️ Vliegtuigen in de buurt</h1>
-    <span class="badge">Straal: 25 km • Bijgewerkt: {{.LastUpdated}}</span>
+    <span class="badge badge-live"><span class="live-dot" aria-hidden="true"></span>Straal: 25 km • Bijgewerkt: {{.LastUpdated}}</span>
 </div>
 
 {{if .PlanesError}}
@@ -51,7 +51,20 @@
     </div>
 
     <div class="card radar-card">
-        <h3>Radarverkeer ({{len .Planes}} vliegtuigen)</h3>
+        <div class="radar-header">
+            <div class="radar-title-group">
+                <div class="radar-scope" aria-hidden="true">
+                    <span class="radar-ring"></span>
+                    <span class="radar-sweep"></span>
+                    <span class="radar-blip radar-blip-1"></span>
+                    <span class="radar-blip radar-blip-2"></span>
+                </div>
+                <div>
+                    <h3>Radarverkeer</h3>
+                    <p class="radar-subtitle">{{len .Planes}} vliegtuigen binnen 25 km (EHSE)</p>
+                </div>
+            </div>
+        </div>
         <div class="table-scroll">
             <table class="kiosk-table">
                 <thead>

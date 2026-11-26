@@ -1,0 +1,50 @@
+# Compiled Go binaries and build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/bin/
+/dist/
+/build/
+
+# Beego specific files & runtime directories
+/logs/
+*.log
+/tmp/
+/runtime/
+/uploads/
+/static/uploads/
+bee.json
+/swagger/
+
+# Go workspace and dependency caches
+/vendor/
+go.work
+go.work.sum
+
+# Environment variables and local secrets
+.env
+.env.local
+.env.*.local
+/conf/app.local.conf
+/conf/dev.conf
+/conf/prod.conf
+
+# IDE and Editor configurations
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db

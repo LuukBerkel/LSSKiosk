@@ -47,7 +47,7 @@ func TestDashboardRoutes(t *testing.T) {
 	}{
 		{path: "/", expectedItems: []string{`lang="nl"`, "Scoutingdashboard", "id=\"slide-energy\"", "id=\"slide-planes\"", "id=\"slide-weather\"", "Dashboardpagina's"}},
 		{path: "/energy", expectedItems: []string{"Aardgasverbruik", "Vandaag tot nu toe", "Gas deze week tot nu toe:", "Elektriciteitsstroom", "Elektriciteitsverbruik deze week tot nu toe:", " kWh", "Aardgasverbruik en buitentemperatuur", "Aardgasverbruik (m³/dag)", "Netafname, teruglevering en zoninstraling", "Netafname is positief; teruglevering is negatief", "Uurmetingen ·", "netafname"}},
-		{path: "/weather", expectedItems: []string{"Gedeeltelijk bewolkt", "Komende uren", "Gevoelstemperatuur", "Neerslagkans"}},
+		{path: "/weather", expectedItems: []string{"Weer bij de scouting", "Komende uren", "Komende dagen", "Gevoelstemperatuur", "Neerslagkans"}},
 		{path: "/static/img/aircraft-placeholder.svg", expectedItems: []string{"Vliegtuigafbeelding niet beschikbaar"}},
 	}
 

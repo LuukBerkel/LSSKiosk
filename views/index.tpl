@@ -9,8 +9,11 @@
 </head>
 <body data-active-slide="{{.ActiveSlide}}">
     <header class="kiosk-header">
-        <div class="brand">Scoutingdashboard</div>
-        <div class="clock">Bijgewerkt {{.LastUpdated}}</div>
+        <div class="brand">
+            <img class="brand-logo" src="/static/img/logo.png" alt="Luchtscouts Seppe logo">
+            <span>Scoutingdashboard</span>
+        </div>
+        <div class="clock" aria-label="Huidige tijd in Nederland">{{.CurrentTime}}</div>
     </header>
 
     <main class="kiosk-main">

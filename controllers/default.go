@@ -11,7 +11,11 @@ type DashboardController struct {
 }
 
 func (c *DashboardController) Get() {
-	c.Data["LastUpdated"] = time.Now().Format("15:04")
+	loc, err := time.LoadLocation("Europe/Amsterdam")
+	if err != nil {
+		loc = time.FixedZone("CET", 3600)
+	}
+	c.Data["CurrentTime"] = time.Now().In(loc).Format("15:04:05")
 	c.Data["ActiveSlide"] = "energy"
 	c.TplName = "index.tpl"
 }

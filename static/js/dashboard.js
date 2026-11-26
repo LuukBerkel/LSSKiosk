@@ -27,6 +27,10 @@
         return response.text();
       })
       .then(function (markup) {
+        var now = window.performance ? window.performance.now() : Date.now();
+        var rootStyle = document.documentElement.style;
+        rootStyle.setProperty("--radar-sync", "-" + (now % 3200).toFixed(1) + "ms");
+        rootStyle.setProperty("--pulse-sync", "-" + (now % 2000).toFixed(1) + "ms");
         target.innerHTML = markup;
       })
       .catch(function (error) {
@@ -39,15 +43,21 @@
       });
   }
 
+  function updateClock() {
+    var clock = document.querySelector(".clock");
+    if (!clock) {
+      return;
+    }
+    clock.textContent = new Date().toLocaleTimeString("nl-NL", {
+      timeZone: "Europe/Amsterdam",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit"
+    });
+  }
+
   function refreshPage(page) {
     loadPage(page).then(function () {
-      var clock = document.querySelector(".clock");
-      if (clock) {
-        clock.textContent = "Bijgewerkt " + new Date().toLocaleTimeString("nl-NL", {
-          hour: "2-digit",
-          minute: "2-digit"
-        });
-      }
       window.setTimeout(function () {
         refreshPage(page);
       }, page.refreshDelay);
@@ -89,6 +99,8 @@
     }
   });
 
+  updateClock();
+  window.setInterval(updateClock, 1000);
   pages.forEach(refreshPage);
   showSlide(currentIndex);
   startRotation();
